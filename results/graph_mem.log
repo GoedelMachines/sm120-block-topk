@@ -1,0 +1,8 @@
+W1109 23:23:43.154000 1 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1109 23:23:43.155000 1 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1109 23:23:43.155000 1 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+allocator: PYTORCH_CUDA_ALLOC_CONF='', max_model_len 1048576, block scratch 0.572 MiB per row per call
+dense : graph pool 98.0 MiB at 16 rows, 290.0 MiB at 48 rows -> 6.000 MiB/row
+sparse: graph pool 98.0 MiB at 16 rows, 290.0 MiB at 48 rows -> 6.000 MiB/row
+block : graph pool 148.0 MiB at 256 rows, 294.0 MiB at 512 rows -> 0.570 MiB/row
+EXIT=0

@@ -1,0 +1,7 @@
+sm120-block-topk
+Copyright 2026 Goedel Machines
+
+This product includes software developed by the vLLM project (https://github.com/vllm-project/vllm)
+and by vLLM-Moet (https://github.com/kacper-daftcode/vLLM-Moet), both under the Apache License 2.0.
+The files under patch/patched/ are modified copies of vLLM / vLLM-Moet source files; the modifications
+are the blocks that reference sm120_sparse_indexer / VLLM_MOET_INDEXER_BLOCK_TOPK / VLLM_MOET_SPARSE_INDEXER.

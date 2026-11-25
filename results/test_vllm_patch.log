@@ -1,0 +1,12 @@
+W1109 23:23:32.470000 1 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1109 23:23:32.470000 1 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1109 23:23:32.471000 1 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+ok   wrappers -> sm120_sparse_indexer, SparseMQAIndexer.weights_dtype = fp32
+ok   vLLM sparse_mqa_logits_paged_decode ctx~3000 layer 0 (new metadata): 40/40 rows equal to dense
+ok   vLLM sparse_mqa_logits_paged_decode ctx~3000 layer 1 (reused metadata): 40/40 rows equal to dense
+ok   vLLM sparse_mqa_logits_paged_decode ctx~70000 layer 0 (new metadata): 40/40 rows equal to dense
+ok   vLLM sparse_mqa_logits_paged_decode ctx~70000 layer 1 (reused metadata): 40/40 rows equal to dense
+ok   vLLM sparse_mqa_logits_prefill_chunk layer 0: 64/64 rows equal to dense
+ok   vLLM sparse_mqa_logits_prefill_chunk layer 1: 64/64 rows equal to dense
+ALL EXACT
+EXIT=0

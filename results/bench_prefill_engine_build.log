@@ -1,0 +1,23 @@
+W1109 23:21:00.314000 1 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1109 23:21:00.315000 1 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1109 23:21:00.315000 1 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+device NVIDIA RTX PRO 6000 Blackwell Server Edition, free 96691 MiB, block_topk kernel info [scan regs, scan CTAs/SM, rescore regs, rescore CTAs/SM] [80, 3, 80, 11], step rows 8192, plain shard 1/4
+     ctx     kind    keys  chunks x rows |  dense ms  (host)  (logits) |  block ms  (host)   (scan) | dense/block | equal
+   16384    plain    8192    1 x  2048*  |      0.19    0.05      0.13 |      0.21    0.05     0.16 |       0.88x | yes
+   16384   source   16384    1 x  8192   |      1.81    0.16      0.97 |      2.11    0.06     1.64 |       0.86x | yes
+   16384 consumer   16384    1 x  8192   |      1.55    0.11      0.97 |      3.02    0.06      nan |       0.51x | yes
+   16384     step               8 layers |      8.56                   |     14.85                  |       0.58x |
+  131072    plain   65536    1 x  2048*  |      1.83    0.04      1.19 |      2.04    0.06     1.39 |       0.90x | yes
+  131072   source  131072    8 x  1024   |     23.38    0.94     12.38 |     14.36    0.44    10.77 |       1.63x | yes
+  131072 consumer  131072    8 x  1024   |     21.74    0.72     12.38 |      2.88    0.33      nan |       7.56x | yes
+  131072     step               8 layers |    115.84                   |     32.00                  |       3.62x |
+  400000    plain  200000    4 x   671*  |      7.93    0.14      4.75 |      4.69    0.23     4.21 |       1.69x | yes
+  400000   source  400000   25 x   335   |    103.04    3.02     58.35 |     39.81    1.34    33.88 |       2.59x | yes
+  400000 consumer  400000   25 x   335   |     86.97    2.24     58.38 |      3.34    1.03      nan |      26.02x | yes
+  400000     step               8 layers |    474.70                   |     67.25                  |       7.06x |
+  700000    plain  350000    6 x   383*  |     18.54    0.22     12.30 |      8.24    0.32     7.34 |       2.25x | yes
+  700000   source  700000   43 x   191   |    241.75    4.66    175.67 |     67.26    2.29    60.66 |       3.59x | yes
+  700000 consumer  700000   43 x   191   |    231.70    3.70    175.59 |      3.82    1.70      nan |      60.73x | yes
+  700000     step               8 layers |   1224.18                   |    107.25                  |      11.41x |
+peak allocated 1266 MiB
+EXIT=0

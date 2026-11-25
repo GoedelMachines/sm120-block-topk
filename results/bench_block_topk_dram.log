@@ -1,0 +1,15 @@
+W1109 23:24:11.616000 1 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1109 23:24:11.616000 1 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1109 23:24:11.617000 1 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+device NVIDIA RTX PRO 6000 Blackwell Server Edition, free 96691 MiB, L2 128 MiB, pool 4500.0 MiB distinct pages, launch default, group 8
+    kind     keys  rows |  dense us  (logits)   GB/s |  block us   (scan)   GB/s | dense/block
+  source   262144   128 |    1149.4     807.8   2825 |     598.4    489.5   4662 |       1.92x
+  source   262144   512 |    8095.6    6569.5   1389 |    2457.5   1844.3   4949 |       3.29x
+  source  1048576   128 |    8202.9    6542.0   1395 |    2093.6   1734.1   5263 |       3.92x
+  source  1048576   512 |   32796.2   26175.1   1395 |    8257.9   7001.8   5214 |       3.97x
+  ratio2   131072   128 |     372.8     288.3   3958 |     287.7    259.3   4399 |       1.30x
+  ratio2   131072   512 |    3811.1    3289.9   1387 |    1135.9    906.8   5032 |       3.36x
+  ratio2   524288   128 |    3810.8    3258.0   1401 |    1062.7    913.5   4995 |       3.59x
+  ratio2   524288   512 |   14837.4   13121.4   1391 |    3904.4   3512.0   5198 |       3.80x
+peak allocated 5105 MiB
+EXIT=0

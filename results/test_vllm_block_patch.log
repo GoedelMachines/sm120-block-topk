@@ -1,0 +1,9 @@
+W1109 23:23:09.860000 1 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1109 23:23:09.861000 1 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1109 23:23:09.861000 1 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+ok   plain    op, 148 rows (24 decode + 124 prefill in 2 chunks) vs dense | decode: top-k equal, block calls {'paged_topk': 1} | both: top-k equal, block calls {'contiguous_topk': 2, 'paged_topk': 1} | dense mode ran block calls none; scratch registered True
+ok   source   op, 148 rows (24 decode + 124 prefill in 2 chunks) vs dense | decode: top-k equal, candidates equal, block calls {'paged_topk': 1} | both: top-k equal, candidates equal, block calls {'contiguous_topk': 2, 'paged_topk': 1} | dense mode ran block calls none; scratch registered True
+ok   consumer op, 148 rows (24 decode + 124 prefill in 2 chunks) vs dense | decode: top-k equal, candidates equal, block calls {'paged_candidates_topk': 1} | both: top-k equal, candidates equal, block calls {'contiguous_candidates_topk': 2, 'paged_candidates_topk': 1} | dense mode ran block calls none; scratch registered True
+
+ALL EXACT
+EXIT=0

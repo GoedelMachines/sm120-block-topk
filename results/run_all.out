@@ -1,0 +1,22 @@
+== ./run_in_image.sh python3 tests/test_block_topk.py -> results/test_block_topk_full.log
+ALL EXACT
+EXIT=0
+== ./run_in_image.sh python3 tests/test_vllm_block_patch.py -> results/test_vllm_block_patch.log
+ALL EXACT
+EXIT=0
+== ./run_in_image.sh python3 tests/test_exact.py --cases ref,decode,prefill,source,sbk16 -> results/test_exact_full.log
+ALL EXACT
+EXIT=0
+== ./run_in_image.sh python3 tests/test_vllm_patch.py -> results/test_vllm_patch.log
+ALL EXACT
+EXIT=0
+== ./run_in_image.sh python3 tests/graph_mem.py -> results/graph_mem.log
+block : graph pool 148.0 MiB at 256 rows, 294.0 MiB at 512 rows -> 0.570 MiB/row
+EXIT=0
+== ./run_in_image.sh python3 bench/bench_block_topk.py --rows 8,128,384,512 --ctx 4096,16384,65536,262144,1048576 --parts --dense-chunk-mib 512 --iters 30 -> results/bench_block_topk.log
+peak allocated 647 MiB
+EXIT=0
+== ./run_in_image.sh python3 bench/bench_block_topk.py --kind source,ratio2 --rows 128,512 --ctx 262144,1048576 --distinct --pool-mib 4500 --parts --dense-chunk-mib 512 --iters 10 -> results/bench_block_topk_dram.log
+peak allocated 5105 MiB
+EXIT=0
+ALL DONE
